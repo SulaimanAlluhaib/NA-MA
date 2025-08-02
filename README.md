@@ -7,7 +7,7 @@ An intelligent bilingual (Arabic/English) financial advisor that analyzes users'
 ## 🚀 **Live Demo**
 
 - **Frontend:** `http://localhost:3000` (Next.js)
-- **Backend API:** `http://192.168.5.38:3000` (Flask)
+- **Backend API:** `http://localhost:3000` (Flask)
 - **Status:** ✅ **Fully Functional**
 
 ## 🎯 **Key Features**
