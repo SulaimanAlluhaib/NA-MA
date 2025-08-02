@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-green: #2E7D32;
+    --primary-green-light: #4CAF50;
+    --primary-green-dark: #1B5E20;
+    --secondary-gold: #FFC107;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --background: #FAFAFA;
+    --surface: #FFFFFF;
+    --error: #F44336;
+    --success: #4CAF50;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    color: var(--text-primary);
+    background: var(--background);
+    font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-green-dark);
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4;
+  }
+
+  .card-hover {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200 cursor-pointer;
+  }
+
+  /* Input styles */
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent;
+  }
+
+  /* Chat message styles */
+  .chat-message-user {
+    @apply bg-green-700 text-white rounded-lg p-3 ml-auto max-w-xs;
+  }
+
+  .chat-message-ai {
+    @apply bg-gray-200 text-gray-800 rounded-lg p-3 mr-auto max-w-xs;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    @apply border-2 border-gray-300 border-t-green-600 rounded-full w-5 h-5 animate-spin;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #FFC107 0%, #FF8F00 100%);
+  }
+}
+
+@layer utilities {
+  /* Arabic text support */
+  .arabic {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+
+  /* Responsive text */
+  @media (max-width: 640px) {
+    .responsive-text {
+      font-size: 0.875rem;
+    }
+  }
+}

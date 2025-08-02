@@ -1,0 +1,6 @@
+Backend/instance/
+Frontend/node_modules/
+Frontend/.next/
+Frontend/.env.local
+.env
+Frontend/package-lock.json
